@@ -50,7 +50,7 @@ important_years <- data.frame(
 )
 
 
-# Create the plot
+# Creating the plot
 ggplot(USAID_agency_all, aes(x = year, y = TotalAid, color = Agency, group = Agency)) +
   geom_line(size = 2, alpha = 0.7) +
   geom_point(size = 3, shape = 21, fill = "white") +
@@ -64,7 +64,7 @@ ggplot(USAID_agency_all, aes(x = year, y = TotalAid, color = Agency, group = Age
            color = "red", angle = 90, vjust = -0.5, size = 4) +
   scale_y_continuous(name = "Total Aid in Million (USD)") +
   ggtitle("USA Aid to Afghanistan By Agency: 2002-2024") +
-  labs(caption = "© Qayoom Suroush, 2025. Data Source: SIGAR.") +  # <- COPYRIGHT ADDED HERE
+  labs(caption = "© Qayoom Suroush, 2025. Data Source: SIGAR.") +  
   theme_classic() +
   theme(
     legend.position = "right",
@@ -73,6 +73,6 @@ ggplot(USAID_agency_all, aes(x = year, y = TotalAid, color = Agency, group = Age
     panel.grid.major = element_line(size = 0.3),
     panel.grid.minor = element_line(size = 0.15),
     plot.margin = margin(t = 14, r = 40, b = 3, l = 1.5),
-    plot.caption = element_text(hjust = 0, size = 9, face = "italic")  # Style the caption
+    plot.caption = element_text(hjust = 0, size = 9, face = "italic") 
   )
 
